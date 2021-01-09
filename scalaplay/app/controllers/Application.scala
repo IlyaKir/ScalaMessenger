@@ -65,6 +65,7 @@ class Application @Inject() (graphQL: GraphQLSchema)(implicit ec: ExecutionConte
 		}
 
 	lazy val exceptionHandler = ExceptionHandler {
+		case (_, error @ NoHeaderException) => HandledException(error.getMessage)
 		case (_, error @ WrongHeaderException) => HandledException(error.getMessage)
 		case (_, error @ WrongMessageIdException) => HandledException(error.getMessage)
 		case (_, error @ MaxQueryDepthReachedError(_)) => HandledException(error.getMessage)

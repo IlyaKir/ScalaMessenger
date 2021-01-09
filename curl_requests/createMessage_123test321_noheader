@@ -1,0 +1,8 @@
+curl \
+    -X POST \
+    -H "Content-Type: application/json" \
+    --data '{
+        "query": "mutation($var:String!) { createMessage(message:$var) { messageId, message, userId, createdAt } }",
+        "variables": {"var": "123test321"}
+    }' \
+    http://localhost:9000/graphql
