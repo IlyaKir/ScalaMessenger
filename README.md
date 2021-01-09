@@ -12,5 +12,5 @@ PS в папке curl_requests есть готовые запросы, на ко
 3) делаем запрос createUser с именем 'user2'
 4) подключаемся через ws по адресу localhost:9000/graphql/subscribe
 5) отправляем по ws сообщение из curl_requests/subscription (тем самым подписываемся на "createMessage" и "updateMessage" пользователя 'user1')
-6) запускаем запрос createMessage_123test321 из папки curl_requests и видим
-7) запускаем запрос updateMessage_1_test из папки curl_requests и видим
+6) запускаем запрос createMessage_123test321 из папки curl_requests и видим что по ws приходит уведомление
+7) запускаем запрос updateMessage_1_test из папки curl_requests и видим что по ws приходит уведомление
