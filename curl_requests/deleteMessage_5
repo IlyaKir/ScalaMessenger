@@ -1,0 +1,9 @@
+curl \
+    -X POST \
+    -H "Content-Type: application/json" \
+    -H "user-name: user1" \
+    --data '{
+        "query": "mutation($varMessageId:Long!) { deleteMessage(messageId:$varMessageId) }",
+        "variables": {"varMessageId": 5}
+    }' \
+    http://localhost:9000/graphql

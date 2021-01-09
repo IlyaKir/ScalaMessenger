@@ -1,0 +1,14 @@
+version: "3.1"
+
+services:
+    play:
+        build: scalaplay/
+        ports:
+            - 9000:9000
+
+    db:
+        image: postgres:latest
+        environment:
+            POSTGRES_PASSWORD: pwd
+            POSTGRES_DB: testdb
+

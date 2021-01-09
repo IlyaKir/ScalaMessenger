@@ -1,0 +1,9 @@
+curl \
+    -X POST \
+    -H "Content-Type: application/json" \
+    -H "user-name: user1" \
+    --data '{
+        "query": "query($varUserId:Long!, $varSubstr:String!) { userMessages(userId:$varUserId, substring:$varSubstr) { messageId, message, userId, createdAt } }",
+        "variables": {"varUserId": 1, "varSubstr": "123"}
+    }' \
+    http://localhost:9000/graphql

@@ -1,0 +1,9 @@
+curl \
+    -X POST \
+    -H "Content-Type: application/json" \
+    -H "user-name: user1" \
+    --data '{
+        "query": "query($varDrop:Long, $varTake:Long) { allUsers(drop:$varDrop, take:$varTake) { userId, name } }",
+        "variables": {"varDrop": 1, "varTake": 2}
+    }' \
+    http://localhost:9000/graphql

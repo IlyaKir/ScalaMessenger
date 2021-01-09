@@ -1,0 +1,8 @@
+curl \
+    -X POST \
+    -H "Content-Type: application/json" \
+    -H "user-name: user1" \
+    --data '{
+        "query": "query { allMessages { messageId, message, userId, createdAt } }"
+    }' \
+    http://localhost:9000/graphql

@@ -1,0 +1,4 @@
+{
+    "query": "subscription($varUserId:Long!, $varEventsToSubscribe:[String!]!) { messageUpdated(userId:$varUserId, events:$varEventsToSubscribe) { name, message { messageId, message, userId, createdAt } } }",
+    "variables": {"varUserId": 1, "varEventsToSubscribe": ["createMessage", "updateMessage"]}
+}
